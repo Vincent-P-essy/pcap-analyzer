@@ -1,0 +1,31 @@
+# Object files
+*.o
+*.lo
+*.la
+*.a
+
+# Build directories
+obj/
+build/
+
+# Binary
+pcap-analyzer
+
+# Capture files (exclude samples)
+*.pcap
+*.pcapng
+!tests/samples/*.pcap
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Valgrind
+vgcore.*
