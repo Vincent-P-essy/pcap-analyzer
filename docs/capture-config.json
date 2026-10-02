@@ -1,0 +1,32 @@
+{
+  "jobs": [
+    {
+      "root": ".",
+      "label": "pcap-analyzer",
+      "caption": "The C analyzer built against libpcap and its synthetic detector tests. No live packet capture or external traffic is collected.",
+      "setup": [
+        [
+          "sudo",
+          "apt-get",
+          "update"
+        ],
+        [
+          "sudo",
+          "apt-get",
+          "install",
+          "-y",
+          "libpcap-dev"
+        ]
+      ],
+      "commands": [
+        [
+          "make"
+        ],
+        [
+          "make",
+          "test"
+        ]
+      ]
+    }
+  ]
+}
