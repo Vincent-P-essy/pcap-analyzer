@@ -1,7 +1,7 @@
 # pcap-analyzer Makefile
 
 CC      := gcc
-CFLAGS  := -Wall -Wextra -std=c11 -O2
+CFLAGS  := -Wall -Wextra -std=c11 -D_DEFAULT_SOURCE -O2
 LDFLAGS := -lpcap
 
 SRCDIR  := src
@@ -11,8 +11,8 @@ TESTDIR := tests
 SRCS    := $(wildcard $(SRCDIR)/*.c)
 OBJS    := $(patsubst $(SRCDIR)/%.c,$(OBJDIR)/%.o,$(SRCS))
 
-# Exclude main.o for test builds
-LIB_SRCS := $(filter-out $(SRCDIR)/main.c,$(SRCS))
+# Tests provide parser stubs and their own entry point
+LIB_SRCS := $(filter-out $(SRCDIR)/main.c $(SRCDIR)/parser.c,$(SRCS))
 LIB_OBJS := $(patsubst $(SRCDIR)/%.c,$(OBJDIR)/%.o,$(LIB_SRCS))
 
 TARGET  := pcap-analyzer

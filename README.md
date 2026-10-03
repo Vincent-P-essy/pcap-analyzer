@@ -224,6 +224,6 @@ correlation engine.
 
 ## Author
 
-**Vincent Plessy** — [vincent.plessy12@gmail.com](mailto:vincent.plessy12@gmail.com)
+**Vincent Plessy** — [GitHub](https://github.com/Vincent-P-essy)
 
 Contributions and issue reports are welcome.
